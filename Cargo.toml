@@ -5,6 +5,7 @@ edition = "2021"
 description = "A simple api wrapper for pterodactyl panel"
 license = "MIT"
 repository = "https://github.com/JensvandeWiel/haopterus"
+readme = "README.md"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
@@ -13,3 +14,4 @@ reqwest = { version = "0.11", features = ["json"] } # reqwest with JSON parsing 
 serde = "1.0.152"
 serde_derive = "1.0.152"
 serde_json = "1.0.91"
+url = "2.3.1"
