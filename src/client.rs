@@ -189,7 +189,7 @@ impl Client {
         let token: String = "Bearer: ".to_string() + self.api_key.borrow();
 
         let response: ServerRoot = self.http_client
-            .get(self.url.join("/api/client/"))
+            .get(self.url.join("/api/client/").expect("Couldn't parse url"))
             .header("Authorization", token)
             .header("Accept", "application/json")
             .send()
@@ -209,7 +209,7 @@ impl Client {
         let token: String = "Bearer: ".to_string() + self.api_key.borrow();
 
         let response: UserRoot = self.http_client
-            .get(self.url.join("/api/client/account"))
+            .get(self.url.join("/api/client/account").expect("Couldn't parse url"))
             .header("Authorization", token)
             .header("Accept", "application/json")
             .send()
