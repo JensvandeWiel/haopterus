@@ -186,10 +186,10 @@ impl Client {
     //lists all servers
     pub async fn list(&self) -> Result<Vec<Server>, Error> {
 
-        let token: string = "Bearer: " + self.api_key.borrow();
+        let token: String = "Bearer: ".to_string() + self.api_key.borrow();
 
         let response: ServerRoot = self.http_client
-            .get(cli.url.join("/api/client/"))
+            .get(self.url.join("/api/client/"))
             .header("Authorization", token)
             .header("Accept", "application/json")
             .send()
@@ -206,10 +206,10 @@ impl Client {
 
     // returns details of user
     pub async fn user_details(&self) -> Result<User, Error> {
-        let token: string = "Bearer: " + self.api_key.borrow();
+        let token: String = "Bearer: ".to_string() + self.api_key.borrow();
 
         let response: UserRoot = self.http_client
-            .get(cli.url.join("/api/client/account"))
+            .get(self.url.join("/api/client/account"))
             .header("Authorization", token)
             .header("Accept", "application/json")
             .send()
