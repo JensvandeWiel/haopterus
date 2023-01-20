@@ -4,7 +4,7 @@ version = "0.0.1"
 edition = "2021"
 description = "A simple api wrapper for pterodactyl panel"
 license = "MIT"
-repository = "github.com/JensvandeWiel/haopterus"
+repository = "https://github.com/JensvandeWiel/haopterus"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
